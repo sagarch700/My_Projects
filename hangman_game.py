@@ -17,6 +17,7 @@ for i in range (0, word_length):
 
 print(logo)
 
+# Loop till the game ends.
 while not end_game:
     repeat = False
     guess = input("Guess a letter: ").lower()
@@ -32,7 +33,8 @@ while not end_game:
 
         if guess == letter:
             display[cursor] = letter
-
+    
+    # Checking for the words that are repeated for both incorrect and correct guesses.
     if guess not in chosen_word and repeat is False:
         print("You guessed a letter, that is not in the word. you lose a life")
         lives -= 1
