@@ -12,7 +12,7 @@ def blackjack():
 
     ''' Blackjack game. 
     
-    This functions simply returns who wins the game of blackjack, whether the computer or the player.
+    This function simply returns who wins the game of blackjack, whether the computer or the player.
 
     Returns:
         Draw 🙃. player score: {player_score} and computer score: {comp_score} \n"
