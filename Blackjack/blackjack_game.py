@@ -3,6 +3,7 @@ from cards_shuffle import cards_shuffle, pack_of_cards
 from deal_card import deal_card
 from calculate_score import calculate_score
 from compare_sum import compare
+from logo import logo
 
 start_game = input("Do you want to play a game of Blackjack? Type 'y' for yes and 'n' for no: ").lower()
 end_game = False
@@ -45,7 +46,8 @@ def blackjack():
             player_card = deal_card(deck)
             user_cards.append(pack_of_cards[player_card][0])
             player_score = calculate_score(user_cards)
-            #print(f"You hold cards: {user_cards}, current score: {player_score} \n")
+            print(f"Your cards: {user_cards}, current score: {player_score} \n")
+            print(f"computer's first card: {computer_cards[0]} \n")
         else:
             break
     
@@ -63,6 +65,7 @@ def blackjack():
 
 while start_game == 'y' and end_game == False:
     os.system("clear")
+    print(logo)
     print(blackjack())
     choice = input("Do you want to play again? Type 'y' for yes and 'no' for no: ").lower()
     print("\n")
